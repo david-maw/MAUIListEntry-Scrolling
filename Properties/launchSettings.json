@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "Windows Machine": {
+      "commandName": "MsixPackage",
+      "nativeDebugging": false
+    },
+    "Mixed Mode Debug": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Users\\david\\Documents\\Develop\\Bugs\\MAUIListEntry\\MAUIListEntry\\bin\\Debug\\net6.0-windows10.0.19041\\win10-x64\\MAUIListEntry.exe",
+      "nativeDebugging": true
+    }
+  }
+}

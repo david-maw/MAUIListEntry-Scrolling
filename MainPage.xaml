@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local ="clr-namespace:MAUIListEntry"
+             xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=netstandard"
+             x:Class="MAUIListEntry.MainPage"
+             BackgroundColor="{DynamicResource SecondaryColor}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <sco:ObservableCollection x:TypeArguments="x:String" x:Key="StringList">
+                <x:String>Baboon</x:String>
+                <x:String>Capuchin Monkey</x:String>
+                <x:String>Blue Monkey</x:String>
+                <x:String>Squirrel Monkey</x:String>
+                <x:String>Golden Lion Tamarin</x:String>
+                <x:String>Howler Monkey</x:String>
+                <x:String>Japanese Macaque</x:String>
+                <x:String>And again:</x:String>
+                <x:String>Baboon</x:String>
+                <x:String>Capuchin Monkey</x:String>
+                <x:String>Blue Monkey</x:String>
+                <x:String>Squirrel Monkey</x:String>
+                <x:String>Golden Lion Tamarin</x:String>
+                <x:String>Howler Monkey</x:String>
+                <x:String>Japanese Macaque</x:String>
+            </sco:ObservableCollection>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <CollectionView ItemsSource="{StaticResource StringList}">
+        <CollectionView.GestureRecognizers>
+            <SwipeGestureRecognizer Direction="Left"/>
+        </CollectionView.GestureRecognizers>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Label Text="{Binding}" FontSize="100" LineBreakMode="TailTruncation"/>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>
